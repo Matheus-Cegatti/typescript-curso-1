@@ -8,6 +8,7 @@ export class Negociacao {
         private _valor: number) {}
 
     get data(): Date {
+        const data = new Date(this._data.getTime()) //programação defensiva
         return this._data;
     }
 
